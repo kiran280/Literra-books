@@ -17,7 +17,7 @@ header{
     z-index: 500;
     flex-direction: row;
     justify-content: space-between;
-    padding: 30px;
+    padding: 15px;
 }
 
 .logo{
@@ -223,18 +223,15 @@ body.rtl .dropdown-menu {
 #themeBtn,
 #rtlBtn {
     cursor: pointer;
-    background: #D4AF37;
     color: #FFFFFF;
     border: 1px solid rgba(255, 215, 0, 0.4);
     padding: 8px 16px;
-    border-radius: 30px;
     font-size: 14px;
     transition: all 0.3s ease;
 }
  
 #themeBtn:hover,
 #rtlBtn:hover {
-    background: #D4AF37;
     border-color: var(--accent-yellow);
     color: rgb(10,22,36);
     transform: translateY(-2px);
@@ -1091,7 +1088,7 @@ footer{
 header {
     width: 100%;
     min-height: 90px;
-    padding: 15px 4%;
+    padding: 30px 4%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1137,7 +1134,7 @@ header .buttons > a { display: flex; }
     padding: 0;
     margin: 0;
     border: 1px solid #D4AF37;
-    border-radius: 50%;
+    border-radius: 10%;
     background: #D4AF37;
     color: #fff;
     cursor: pointer;
@@ -1379,11 +1376,10 @@ body.light-mode header nav a:hover {
     }
 }
 
-/* ================= RESPONSE 2: PERFECTLY CENTERED HEADER ================= */
 header {
     width: 100%;
     min-height: 80px;
-    padding: 12px 40px;
+    padding: 30px;
     display: grid !important;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
@@ -1458,13 +1454,10 @@ header .buttons a {
 }
 
 #themeBtn {
-    width: 42px;
-    height: 42px;
-    padding: 0;
+    padding: 20px 14px;
     margin: 0 !important;
     border: 1px solid #D4AF37;
-    border-radius: 50%;
-    background: #D4AF37;
+    border-radius: 40px;
     color: #fff;
     display: inline-flex;
     align-items: center;
@@ -1503,7 +1496,6 @@ body.light-mode header nav ul li a:hover {
     color: #D4AF37;
 }
 
-/* RTL keeps the navigation in the exact center */
 body.rtl header {
     direction: rtl;
 }
