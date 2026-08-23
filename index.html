@@ -10,17 +10,17 @@
 
 <body>
     <header>
-    <div class="logo">
+   <a href="index.html"> <div class="logo">
         <img src="booksimg/logo.png" alt="Logo">
         <h1>Literra</h1>
-    </div>
+    </div></a>
 
     <nav>
          <ul>
             <li class="dropdown">
-                <a href="index.html" class="dropdown-btn">Home ▾</a>
+                <a href="index.html" class="dropdown-btn active-link">Home ▾</a>
                     <ul class="dropdown-menu">
-                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="index.html" class="active-link">Home 1</a></li>
                         <li><a href="home2.html">Home 2</a></li>
                     </ul>
             </li>
@@ -91,92 +91,72 @@
     </div>
 </section>
 
-<section class="magazine-books">
+<!-- ==================== TRENDING BEST SELLERS ==================== -->
+<section class="trending-bestsellers">
+    <div class="title">
+        <h2>Trending Best Sellers</h2>
+        <p>Discover the most popular books readers are loving right now.</p>
+    </div>
 
-<div class="title">
-<h2>Editor's Choice</h2>
-<p>Handpicked books recommended by the Literra editorial team.</p>
-</div>
+    <div class="bestsellers-grid">
 
-<div class="layout">
+        <div class="bestseller-card">
+            <div class="badge">#1 Best Seller</div>
+            <img src="booksimg/THEALCHEMIST.webp" alt="The Alchemist">
+            <div class="bestseller-info">
+                <h3>The Alchemist</h3>
+                <span class="author">Paulo Coelho</span>
+                <p>An enchanting story about following your dreams and listening to your heart.</p>
+                <div class="card-bottom">
+                    <span class="price">$15.99</span>
+                    <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
 
-<div class="featured">
+        <div class="bestseller-card">
+            <div class="badge">Top Rated</div>
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600" alt="Atomic Habits">
+            <div class="bestseller-info">
+                <h3>Atomic Habits</h3>
+                <span class="author">James Clear</span>
+                <p>Tiny changes, remarkable results. Build good habits and break bad ones.</p>
+                <div class="card-bottom">
+                    <span class="price">$16.80</span>
+                    <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
 
-<img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=1200" alt="Featured Book">
+        <div class="bestseller-card">
+            <div class="badge">Popular</div>
+            <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=600" alt="Rich Dad Poor Dad">
+            <div class="bestseller-info">
+                <h3>Rich Dad Poor Dad</h3>
+                <span class="author">Robert Kiyosaki</span>
+                <p>What the rich teach their kids about money that the poor and middle class do not!</p>
+                <div class="card-bottom">
+                    <span class="price">$18.99</span>
+                    <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
 
-<div class="overlay">
+        <div class="bestseller-card">
+            <div class="badge">Classic</div>
+            <img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=600" alt="Think and Grow Rich">
+            <div class="bestseller-info">
+                <h3>Think &amp; Grow Rich</h3>
+                <span class="author">Napoleon Hill</span>
+                <p>The landmark bestseller on personal success, mindset, and financial freedom.</p>
+                <div class="card-bottom">
+                    <span class="price">$17.99</span>
+                    <a href="#" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
 
-<div>
-
-<h3>Atomic Habits</h3>
-
-<p>
-Transform your life with small daily improvements and build habits that last forever.
-</p>
-
-<button>Read More</button>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="side-books">
-
-<div class="book">
-
-<img src="booksimg/THEALCHEMIST.webp" alt="The Alchemist">
-
-<div class="info">
-
-<h4>The Alchemist</h4>
-
-<div class="author">Paulo Coelho</div>
-
-<p>Discover your personal legend.</p>
-
-<div class="price">$15.99</div>
-
-</div>
-
-</div>
-
-<div class="book">
-
-<img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=500" alt="Rich Dad Poor Dad">
-
-<div class="info">
-
-<h4>Rich Dad Poor Dad</h4>
-
-<div class="author">Robert Kiyosaki</div>
-
-<p>Learn financial freedom.</p>
-
-<div class="price">$18.99</div>
-
-</div>
-
-</div>
-
-<div class="book">
-
-<img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=500" alt="Think and Grow Rich">
-
-<div class="info">
-
-<h4>Think and Grow Rich</h4>
-
-<div class="author">Napoleon Hill</div>
-
-<p>Master the mindset of success.</p>
-
-<div class="price">$17.99</div>
-</div>
-</div>
-</div>
-</div>
+    </div>
 </section>
 
 <section class="categories">
@@ -232,7 +212,7 @@ Transform your life with small daily improvements and build habits that last for
 
 <div class="category">
 <div class="image">
-<img src="https://images.unsplash.com/photo-1511108690759-009324a90311?w=1000" alt="Comics">
+<img src="booksimg/comic.jpg" alt="Comics">
 </div>
 <div class="content">
 <h3>Comics</h3>
@@ -275,10 +255,10 @@ Transform your life with small daily improvements and build habits that last for
 
     <div class="box">
 
-        <div class="logo-container">
+        <a href="index.html"><div class="logo-container">
         <img src="booksimg/logo.png" alt="Literra Logo" class="logo">
         <h1 class="logo-name">Literra</h1>
-        </div>
+        </div></a>
         <p>
             Where every page begins a new adventure.<br>
             Discover stories that inspire,<br>
@@ -350,7 +330,7 @@ Transform your life with small daily improvements and build habits that last for
             <i class="fa-solid fa-phone"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
   <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
 </svg></i>
-            +91 9876543210
+            +91 9876543
         </p>
 
         <p>
@@ -365,8 +345,17 @@ Transform your life with small daily improvements and build habits that last for
 
 </div>
 
-<div class="copyright">
-    &copy; 2026 <strong>Literra</strong>. All Rights Reserved.
+<div class="footer-bottom">
+
+    <div class="copyright">
+        &copy; 2026 <strong>Literra</strong>. All Rights Reserved.
+    </div>
+
+    <div class="footer-links">
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
+
 </div>
 </footer>
 

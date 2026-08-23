@@ -392,143 +392,164 @@ font-size:38px;
 
 }
 
-.journey{
-    background:white;
-    padding:10px 10%;
+/* ==========================================
+   JOURNEY SECTION - HORIZONTAL ROADMAP STEPPER
+   ========================================== */
+.journey {
+    padding: 80px 8%;
+    background: var(--bg-section);
+    transition: background-color 0.35s ease;
 }
 
-.journey-title{
-    text-align:center;
-    margin-bottom:70px;
+.journey-title {
+    text-align: center;
+    margin-bottom: 60px;
 }
 
-.journey-title span{
-    color:#D4AF37;
-    font-weight:600;
-    letter-spacing:3px;
-    text-transform:uppercase;
+.journey-title span {
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
-.journey-title h2{
-    font-size:48px;
-    margin:15px 0;
-    color:rgb(10,22,36);
+.journey-title h2 {
+    font-size: 48px;
+    margin: 15px 0;
+    color: var(--heading);
 }
 
-.journey-title h2 span{
-    color:rgb(10,22,36);
+.journey-title p {
+    max-width: 700px;
+    margin: auto;
+    color: var(--text-secondary);
+    line-height: 1.8;
 }
 
-.journey-title p{
-    max-width:700px;
-    margin:auto;
-    color:#666;
-    line-height:1.8;
+/* Timeline Track Container */
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 30px;
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.timeline{
-    position:relative;
-    max-width:1100px;
-    margin:auto;
+/* Continuous Connective Line across items */
+.timeline-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    border-top: 3px solid var(--border);
+    transition: all 0.3s ease;
 }
 
-.timeline::before{
-    content:"";
-    position:absolute;
-    left:50%;
-    top:0;
-    width:4px;
-    height:100%;
-    background:#D4AF37;
-    transform:translateX(-50%);
+/* Top Accent Marker (Dot) */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--bg-section);
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 0 4px var(--bg-section);
+    z-index: 2;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.timeline-item{
-    position:relative;
-    width:50%;
-    padding:20px 40px;
-    margin-bottom:40px;
+.timeline-item:hover::before {
+    background: var(--accent);
+    transform: scale(1.3);
 }
 
-.timeline-item.left{
-    left:0;
-    text-align:right;
+/* Content Box (No Card Outline) */
+.timeline-item .content {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
 }
 
-.timeline-item.right{
-    left:50%;
+/* Year Badge Header */
+.year {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 8px;
+    display: block;
+    background: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
 }
 
-.content{
-    background:#fff;
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
+.content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 12px;
 }
 
-.content:hover{
-    transform:translateY(-8px);
+.content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    font-size: 15px;
 }
 
-.year{
-    display:inline-block;
-    background:#D4AF37;
-    color:#fff;
-    padding:8px 18px;
-    border-radius:30px;
-    font-weight:600;
-    margin-bottom:15px;
+/* ==========================================
+   RTL (RIGHT-TO-LEFT) SUPPORT
+   ========================================== */
+body.rtl .timeline-item::before {
+    left: auto;
+    right: 0;
 }
 
-.content h3{
-    margin-bottom:15px;
-    color:#8B5E3C;
+body.rtl .timeline-item {
+    text-align: right;
 }
 
-.content p{
-    color:#666;
-    line-height:1.8;
+/* ==========================================
+   RESPONSIVE LAYOUT
+   ========================================== */
+@media (max-width: 900px) {
+    .timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-.timeline-item::before{
-    content:"";
-    position:absolute;
-    width:20px;
-    height:20px;
-    border-radius:50%;
-    background:#D4AF37;
-    border:5px solid #fff;
-    top:40px;
-    z-index:2;
-}
+@media (max-width: 600px) {
+    .timeline {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
 
-.timeline-item.left::before{
-    right:-12px;
-}
+    .timeline-item {
+        border-top: none;
+        border-left: 3px solid var(--border);
+        padding-top: 0;
+        padding-left: 25px;
+    }
 
-.timeline-item.right::before{
-    left:-12px;
-}
+    .timeline-item::before {
+        top: 0;
+        left: -9px;
+    }
 
+    body.rtl .timeline-item {
+        border-left: none;
+        border-right: 3px solid var(--border);
+        padding-left: 0;
+        padding-right: 25px;
+    }
 
-@media(max-width:900px){
-
-.timeline::before{
-    left:20px;
-}
-
-.timeline-item{
-    width:100%;
-    left:0 !important;
-    padding-left:60px;
-    padding-right:0;
-    text-align:left;
-}
-
-.timeline-item::before{
-    left:10px;
-}
+    body.rtl .timeline-item::before {
+        left: auto;
+        right: -9px;
+    }
 }
 
 .yd{
@@ -832,12 +853,60 @@ footer{
     margin-right:10px;
 }
 
-.copyright{
-    text-align:center;
-    margin-top:40px;
-    border-top:1px solid gray;
-    padding-top:20px;
-    font-size:16px;
+/* ==========================================
+   FOOTER COPYRIGHT & LEGAL LINKS
+   ========================================== */
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    border-top: 1px solid gray;
+    padding-top: 20px;
+    font-size: 16px;
+    flex-wrap: nowrap;
+}
+
+.copyright-text {
+    color: var(--text-secondary);
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+/* RTL Support */
+body.rtl .copyright {
+    flex-direction: row-reverse;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .copyright {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    body.rtl .copyright {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
 }
 
 
